@@ -20,7 +20,7 @@
 *.rar
 
 #ignore IDEA files
-.idea
+**/.idea
 *.iml
 
 
