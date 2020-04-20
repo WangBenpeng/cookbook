@@ -6,16 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="threadmanagement" />
+        <module name="chapter01" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="chapter01" target="1.8" />
       <module name="cookbook" target="1.8" />
       <module name="threadmanagement" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="chapter01" options="-parameters" />
       <module name="cookbook" options="-parameters" />
       <module name="threadmanagement" options="-parameters" />
     </option>

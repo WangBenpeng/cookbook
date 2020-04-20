@@ -1,4 +1,4 @@
-package com.pengo.concurrency.thread;
+package com.pengo.concurrency.exercise01;
 
 public class Calculator implements Runnable {
     @Override

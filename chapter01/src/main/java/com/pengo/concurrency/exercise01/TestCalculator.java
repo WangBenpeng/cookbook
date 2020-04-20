@@ -1,4 +1,4 @@
-package com.pengo.concurrency.thread;
+package com.pengo.concurrency.exercise01;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -11,9 +11,9 @@ public class TestCalculator {
         System.out.printf("Maximum Priority:%s\n",Thread.MAX_PRIORITY);
 
         Thread threads[];
-        Thread.State states[];
+        Thread.State status[];
         threads = new Thread[10];
-        states = new Thread.State[10];
+        status = new Thread.State[10];
         for (int i = 0; i < 10; i++) {
             threads[i] = new Thread(new Calculator());
             if ((i % 2) == 0) {
@@ -28,13 +28,39 @@ public class TestCalculator {
 
             for (int i = 0; i < 10; i++) {
                 pw.println("Main : Status of Thread " + i + ":" + threads[i].getState());
-                states[i] = threads[i].getState();
+                status[i] = threads[i].getState();
             }
             for (int i = 0; i < 10; i++) {
                 threads[i].start();
             }
+
+            boolean finish = false;
+            while (!finish) {
+                for (int i = 0; i < 10; i++) {
+                    if (threads[i].getState() != status[i]) {
+                        writeThreadInfo(pw, threads[i], status[i]);
+                        status[i] = threads[i].getState();
+                    }
+                }
+                finish = true;
+                for (int i = 0; i < 10; i++) {
+                    finish = finish && (threads[i].getState() == Thread.State.TERMINATED);
+                }
+
+            }
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+
+    }
+
+    private static void writeThreadInfo(PrintWriter pw, Thread thread, Thread.State state) {
+        pw.printf("Main : ID %d - %s \n", thread.getId(), thread.getName());
+        pw.printf("Main : Priority %d \n", thread.getPriority());
+        pw.printf("Main : Old State %s \n", state);
+        pw.printf("Main : New State %s \n", thread.getState());
+        pw.printf("Main : ******************************\n");
+
     }
 }
