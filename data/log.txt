@@ -21,7 +21,7 @@ Main : ******************************
 Main : ID 15 - MyThread[2]===> 
 Main : Priority 10 
 Main : Old State NEW 
-Main : New State RUNNABLE 
+Main : New State TERMINATED 
 Main : ******************************
 Main : ID 16 - MyThread[3]===> 
 Main : Priority 1 
@@ -31,7 +31,7 @@ Main : ******************************
 Main : ID 17 - MyThread[4]===> 
 Main : Priority 10 
 Main : Old State NEW 
-Main : New State RUNNABLE 
+Main : New State TERMINATED 
 Main : ******************************
 Main : ID 18 - MyThread[5]===> 
 Main : Priority 1 
@@ -41,7 +41,7 @@ Main : ******************************
 Main : ID 19 - MyThread[6]===> 
 Main : Priority 10 
 Main : Old State NEW 
-Main : New State RUNNABLE 
+Main : New State TERMINATED 
 Main : ******************************
 Main : ID 20 - MyThread[7]===> 
 Main : Priority 1 
@@ -51,30 +51,20 @@ Main : ******************************
 Main : ID 21 - MyThread[8]===> 
 Main : Priority 10 
 Main : Old State NEW 
-Main : New State RUNNABLE 
+Main : New State TERMINATED 
 Main : ******************************
 Main : ID 22 - MyThread[9]===> 
 Main : Priority 1 
 Main : Old State NEW 
 Main : New State RUNNABLE 
 Main : ******************************
-Main : ID 17 - MyThread[4]===> 
-Main : Priority 10 
+Main : ID 18 - MyThread[5]===> 
+Main : Priority 1 
 Main : Old State RUNNABLE 
 Main : New State TERMINATED 
 Main : ******************************
-Main : ID 21 - MyThread[8]===> 
-Main : Priority 10 
-Main : Old State RUNNABLE 
-Main : New State TERMINATED 
-Main : ******************************
-Main : ID 15 - MyThread[2]===> 
-Main : Priority 10 
-Main : Old State RUNNABLE 
-Main : New State TERMINATED 
-Main : ******************************
-Main : ID 19 - MyThread[6]===> 
-Main : Priority 10 
+Main : ID 16 - MyThread[3]===> 
+Main : Priority 1 
 Main : Old State RUNNABLE 
 Main : New State TERMINATED 
 Main : ******************************
@@ -83,22 +73,12 @@ Main : Priority 10
 Main : Old State RUNNABLE 
 Main : New State TERMINATED 
 Main : ******************************
-Main : ID 16 - MyThread[3]===> 
-Main : Priority 1 
-Main : Old State RUNNABLE 
-Main : New State TERMINATED 
-Main : ******************************
-Main : ID 18 - MyThread[5]===> 
-Main : Priority 1 
-Main : Old State RUNNABLE 
-Main : New State TERMINATED 
-Main : ******************************
 Main : ID 20 - MyThread[7]===> 
 Main : Priority 1 
 Main : Old State RUNNABLE 
 Main : New State TERMINATED 
 Main : ******************************
-Main : ID 14 - MyThread[1]===> 
+Main : ID 22 - MyThread[9]===> 
 Main : Priority 1 
 Main : Old State RUNNABLE 
 Main : New State TERMINATED 
