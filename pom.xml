@@ -5,6 +5,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>chapter01</module>
+        <module>chapter02</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
