@@ -1,5 +1,7 @@
 package com.pengo.concurrency.exercise03;
 
+import java.util.concurrent.TimeUnit;
+
 public class TestPrintQueue
 {
   public static void main(String[] args)
@@ -15,16 +17,24 @@ public class TestPrintQueue
   private static void testPrintQueue(Boolean fairMode)
   {
     PrintQueue printQueue = new PrintQueue(fairMode);
-    Thread thread[] = new Thread[20];
-    for(int i = 0; i < 20; i++)
+    Thread thread[] = new Thread[10];
+    for(int i = 0; i < 10; i++)
     {
       thread[i] = new Thread(new Job(printQueue), "Thread " + i);
     }
-    for(int i = 0; i < 20; i++)
+    for(int i = 0; i < 10; i++)
     {
       thread[i].start();
+      try
+      {
+        TimeUnit.MILLISECONDS.sleep(100);
+      }
+      catch(InterruptedException e)
+      {
+        e.printStackTrace();
+      }
     }
-    for(int i = 0; i < 20; i++)
+    for(int i = 0; i < 10; i++)
     {
       try
       {
