@@ -33,7 +33,10 @@ public class Searcher implements Runnable
       counter = 0;
       for(int j = 0; j < row.length; j++)
       {
-        counter++;
+        if(row[j] == number)
+        {
+          counter++;
+        }
       }
       results.setData(i, counter);
     }
